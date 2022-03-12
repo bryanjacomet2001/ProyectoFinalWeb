@@ -148,10 +148,10 @@
 
             }
             else{
-                $cedula = $_REQUEST['cedula'];
+                $id = $_REQUEST['idRol'];
                 $modeloRoles = new RolesDAO();
                 
-                $resultados = $this->modelo->buscar($cedula);
+                $resultados = $this->modelo->buscar($id);
                 $roles = $modeloRoles->listar();
 
                 require_once './vista/cliente/formulario_actualizar.php';

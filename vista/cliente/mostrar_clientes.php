@@ -155,7 +155,7 @@
                             <td><?php echo $fila['correo']?></td>
                             <td><?php echo $fila['descripcion']?></td>
                             <td>
-                                <a class="editar" href="index.php?c=usuario&f=actualizar&cedula=<?php echo $fila['cedula'];?>">Editar</a>
+                                <a class="editar" href="index.php?c=usuario&f=actualizar&cedula=<?php echo $fila['idRol'];?>">Editar</a>
                                 <a class="eliminar" href="index.php?c=usuario&f=eliminar&cedula=<?php echo $fila['cedula'];?>">Eliminar</a>
                             </td>
                         </tr>

@@ -74,6 +74,21 @@
             return $resultados;
         }
 
+        public function buscarxid($busq){
+
+            if(!empty($busq)){
+                $sql = "SELECT u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol='$busq'";
+                $stmt = $this->con->prepare($sql);
+                $stmt->execute();
+    
+                $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            }
+
+            return $resultados;
+        }
+
         public function actualizar($cliente){
 
             $cedula = $cliente->getCedula();
