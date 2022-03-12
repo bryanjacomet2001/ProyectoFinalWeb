@@ -148,10 +148,10 @@
 
             }
             else{
-                $id = $_REQUEST['idRol'];
+                $id = $_REQUEST['id'];
                 $modeloRoles = new RolesDAO();
                 
-                $resultados = $this->modelo->buscar($id);
+                $resultados = $this->modelo->buscarxid($id);
                 $roles = $modeloRoles->listar();
 
                 require_once './vista/cliente/formulario_actualizar.php';

@@ -30,7 +30,7 @@
         <div class="contenedorForm">
             <form class="formulario_registro" action="index.php?c=usuario&f=insertar" method="POST" > 
                 
-                <h1>Formulario registro de usuario</h1> <br>
+                <h1>Formulario registrar usuario</h1> <br>
 
                 <div class="contenido">
                 <div class="label"><label for="cedula">Ingrese su cedula: </label></div>

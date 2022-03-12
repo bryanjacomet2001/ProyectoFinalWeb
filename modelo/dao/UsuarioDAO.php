@@ -42,7 +42,7 @@
 
         public function listar(){
             
-            $sql = "SELECT u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, u.idRol,
+            $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
              r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol";
             $stmt = $this->con->prepare($sql);
             $stmt->execute();
@@ -55,7 +55,7 @@
         public function buscar($busq){
 
             if(!empty($busq)){
-                $sql = "SELECT u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
                 r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE cedula='$busq'";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();
@@ -64,7 +64,7 @@
 
             }else{
 
-                $sql = "SELECT u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
                 r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();
@@ -77,7 +77,8 @@
         public function buscarxid($busq){
 
             if(!empty($busq)){
-                $sql = "SELECT u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+
+                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
                 r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol='$busq'";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();

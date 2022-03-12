@@ -14,7 +14,15 @@
             <img src="/assets/img/logo.png" alt="Logo">
         </div>
         
-        <nav class="header-navbar"> </nav>
+        <nav class="header-navbar"> 
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li><a href="index.php?c=usuario&f=listar">Regresar</a></li>
+        </ul>
+        </nav>
     </header>
 
     <main>
@@ -23,36 +31,36 @@
             <form class="formulario_registro" method="POST" action="index.php?c=usuario&f=actualizar"> 
                 
                 <?php foreach($resultados as $fila){ ?>
-                <h1>Formulario registro de usuario</h1> <br>
+                <h1>Formulario Editar usuario</h1> <br>
 
                 <div class="contenido">
                 <div class="label"><label for="cedula">Ingrese su cedula: </label></div>
-                <div class="datos"><input type="text" placeholder="Escriba su cedula" name="cedula" value="<?php echo $fila['cedula']; ?>"></div>
+                <div class="datos"><input type="text" placeholder="Escriba su cedula" name="cedula" id="cedula" value="<?php echo $fila['cedula']; ?>"></div>
                 </div>
 
                 <div class="contenido">
                 <div class="label"><label for="nombre">Ingrese su nombre:</label> </div>
-                <div class="datos"><input type="text" placeholder="Escriba su nombre" name="nombre" value="<?php echo $fila['nombre']; ?>"></div>
+                <div class="datos"><input type="text" placeholder="Escriba su nombre" name="nombre" id="nombre" value="<?php echo $fila['nombre']; ?>"></div>
                 </div>
                 
                 <div class="contenido">
                 <div class="label"><label for="apellido">Ingrese su apellido: </label></div>
-                <div class="datos"><input type="text" placeholder="Escriba su apellido" name="apellido" value="<?php echo $fila['apellido']; ?>"></div>
+                <div class="datos"><input type="text" placeholder="Escriba su apellido" name="apellido" id="apellido" value="<?php echo $fila['apellido']; ?>"></div>
                 </div>
 
                 <div class="contenido">
                 <div class="label"><label for="username">Ingrese su username: </label></div>
-                <div class="datos"><input type="text" placeholder="Escriba su username" name="username" value="<?php echo $fila['username'];; ?>"></div>
+                <div class="datos"><input type="text" placeholder="Escriba su username" name="username" id="username" value="<?php echo $fila['username'];; ?>"></div>
                 </div>
 
                 <div class="contenido">
                 <div class="label"><label for="contraseña">Ingrese su contraseña:</label> </div>
-                <div class="datos"><input type="password" placeholder="Escriba su contraseña" name="contraseña" value="<?php echo $fila['contraseña'];; ?>" ></div>
+                <div class="datos"><input type="password" placeholder="Escriba su contraseña" name="contraseña" id="contraseña" value="<?php echo $fila['contraseña'];; ?>" ></div>
                 </div>
 
                 <div class="contenido">
                 <div class="label"><label for="correo">Ingrese su E-mail: </label></div>
-                <div class="datos"><input type="email" placeholder="bj2257239@hotmail.com" name="correo" value="<?php echo $fila['correo']; ?>"></div> 
+                <div class="datos"><input type="email" placeholder="bj2257239@hotmail.com" name="correo" id="correo" value="<?php echo $fila['correo']; ?>"></div> 
                 </div> <br>
 
                 <div class="contenido">
@@ -76,8 +84,6 @@
             </form>
         </div>
     </main>   
-
     <script type="text/javascript" src="/assets/js/registro.js"> </script>
-
 </body>
 </html>
