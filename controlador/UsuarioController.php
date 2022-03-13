@@ -43,7 +43,7 @@
                         }else if($i['idRol'] == 2){
                             $_SESSION['rol'] = "administrador";
                             $_SESSION['user'] = $i['username'];
-                            header('Location:index.php?c=usuario&f=listar');
+                            header('Location:index.php?c=navegacion&f=RedireccionarAcciones');
                             break;
                         }
                     }else{
@@ -54,14 +54,6 @@
             }else{
                 require_once './vista/cliente/login.php';
             }
-        }
-
-        public function salir(){
-            
-            session_unset();
-            session_destroy();
-
-            require_once './vista/cliente/login.php';
         }
 
         public function insertar(){

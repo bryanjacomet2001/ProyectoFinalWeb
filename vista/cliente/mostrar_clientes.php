@@ -115,7 +115,7 @@
                     <li></li>
                     <div class="perfil_usuario">
                         <li><a href="#"><a href="#"><?php echo  $_SESSION['user']?></a></li>
-                        <li><a href="index.php?c=usuario&f=salir">Cerrar sesion</a></li>
+                        <li><a href="index.php?c=navegacion&f=RedireccionarAcciones">Regresar</a></li>
                     </div>
                 </ul>
             </nav>
