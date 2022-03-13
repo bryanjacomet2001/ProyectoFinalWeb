@@ -20,7 +20,7 @@
             <li></li>
             <li></li>
             <li></li>
-            <li><a href="index.php?c=usuario&f=salir">Regresar</a></li>
+            <li><a href="index.php?c=navegacion&f=salir">Regresar</a></li>
 
         </ul>
         </nav>

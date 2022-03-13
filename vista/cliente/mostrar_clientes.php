@@ -115,7 +115,7 @@
                     <li></li>
                     <div class="perfil_usuario">
                         <li><a href="#"><a href="#"><?php echo  $_SESSION['user']?></a></li>
-                        <li><a href="index.php?c=usuario&f=salir">Cerrar sesion</a></li>
+                        <li><a href="index.php?c=navegacion&f=RedireccionarAcciones">Regresar</a></li>
                     </div>
                 </ul>
             </nav>
@@ -155,7 +155,7 @@
                             <td><?php echo $fila['correo']?></td>
                             <td><?php echo $fila['descripcion']?></td>
                             <td>
-                                <a class="editar" href="index.php?c=usuario&f=actualizar&id=<?php echo $fila['idRol'];?>">Editar</a>
+                                <a class="editar" href="index.php?c=usuario&f=actualizar&id=<?php echo $fila['id'];?>">Editar</a>
                                 <a class="eliminar" href="index.php?c=usuario&f=eliminar&cedula=<?php echo $fila['cedula'];?>">Eliminar</a>
                             </td>
                         </tr>
