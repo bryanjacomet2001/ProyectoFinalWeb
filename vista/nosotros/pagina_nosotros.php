@@ -96,12 +96,7 @@
         </div>
 
     </div>
-    <div class="testimonios">
-        <div>
-            <p>Exelente atencion del hospital buen trato al paciente y buenos especialistas veterinarios atendieron y salvaron a mi perrita</p>
-            
-        </div>
-    </div>
+    
     <section class="agregar-testimonios">
         <h2>Agrega tus testimonios</h2>
         <div>
@@ -111,7 +106,18 @@
             </div>
         </div>
     </section>
-
+    
+    <div class="content-testimonios">
+        <div class="testimonios">
+            <img src="./assets/img/quote_32.png" alt="quote">
+            <div>
+                <p>Exelente atencion del hospital buen trato al paciente y buenos especialistas veterinarios atendieron y salvaron a mi perrita</p>
+            </div>
+            <h3>Edinson Flores</h3>
+            <h5>2022-02-23</h5>
+        </div>
+    </div>
+    
     <footer>
         <div class="footer-logo">
             <img src="./assets/img/logo.png" alt="Logo">
