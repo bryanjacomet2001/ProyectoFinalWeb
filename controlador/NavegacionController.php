@@ -7,7 +7,7 @@
     class NavegacionController{
         
         public function RedireccionarInicio(){
-            include './vista/cliente/pagina_principal.php';
+            require_once './vista/cliente/pagina_principal.php';
         }
 
         public function RedireccionarAcciones(){
