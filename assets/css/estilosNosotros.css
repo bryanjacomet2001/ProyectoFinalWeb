@@ -109,9 +109,8 @@
 .testimonios{
     display:  inline-block ;
     border-radius: 20px;
-    padding-top: 10px;
     width: 20%;
-    height: 100px;
+    height: 18%;
     color: black;
     font-weight: 40px;
     line-height: 1.2;
@@ -122,12 +121,21 @@
     
 }
 .testimonios div {
-    margin: 20px;
+    margin: 0 20px 10px 20px;
    
 }
 .testimonios img{
-    display:block;
-    margin:auto;
+   position: relative;
+    margin: 1px;
+}
+.testimonios h5{
+     margin-bottom: 5px;
+}
+
+.content-testimonios{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 .agregar-testimonios{

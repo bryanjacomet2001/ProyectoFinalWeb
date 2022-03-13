@@ -42,6 +42,10 @@
                             $_SESSION['user'] = $i['username'];
                             header('Location:index.php?c=navegacion&f=RedireccionarAcciones');
                             break;
+                        }else{
+                            $_SESSION['rol'] = "empleado";
+                            $_SESSION['user'] = $i['username'];
+                            header('Location:index.php?c=navegacion&f=RedireccionarAcciones');
                         }
                     }else{
                         $_SESSION['msjD'] = "Credenciales incorrectas";

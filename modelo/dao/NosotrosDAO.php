@@ -28,6 +28,16 @@ class NosotrosDAO{
         }
         return true;
     }
+    public function listar() {
+        $sql = "SELECT t.codigo_testimonio,t.comentario,u.nombre,t.fecha_comentario
+        FROM TESTIMONIO t
+        INNER JOIN usuario u ON u.id = t.ID_USUARIO
+        order by t.fecha_comentario";
+        $stmt = $this->con->prepare($sql);
+        $stmt->execute();
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $resultados;
+    }
 
 
 }

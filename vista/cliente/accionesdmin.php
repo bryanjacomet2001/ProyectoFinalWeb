@@ -29,30 +29,58 @@
 
     <main>
         <?php if($_SESSION['rol'] == "administrador"){ ?>
-        <div class="acciones_admin">
-            <div class="contenedorForm">
-                <form class="registro_empleado" action="index.php?c=usuario&f=" method="POST" > 
-                    <img src="/assets/img/registro.png" alt="mostrar">
-                    <input class="registrar_empleados" class="boton" type="submit" value="Registrar empleados">
-                </form>
-            </div>
+            <div class="acciones_admin">
+                <div class="contenedorForm">
+                    <form class="registro_empleado" action="index.php?c=usuario&f=" method="POST" > 
+                        <img src="/assets/img/registro.png" alt="mostrar">
+                        <input class="registrar_empleados" class="boton" type="submit" value="Registrar empleados">
+                    </form>
+                </div>
 
-            <div class="contenedorForm">
-                <form class="mostrar_empleado" action="index.php?c=&f=" method="POST" > 
-                    <img src="/assets/img/busqueda.png" alt="mostrar">
-                    <input class="mostrar_empleados" class="boton" type="submit" value="Mostrar Empleados">
-                </form>
-            </div>
+                <div class="contenedorForm">
+                    <form class="mostrar_empleado" action="index.php?c=&f=" method="POST" > 
+                        <img src="/assets/img/busqueda.png" alt="mostrar">
+                        <input class="mostrar_empleados" class="boton" type="submit" value="Mostrar Empleados">
+                    </form>
+                </div>
 
-            <div class="contenedorForm">
-                <form class="mostrar_cliente" action="index.php?c=usuario&f=listarCliente" method="POST" > 
-                    <img src="/assets/img/busqueda.png" alt="mostrar">
-                    <input class="mostrar_clientes" class="boton" type="submit" value="Mostrar clientes">
-                </form>
+                <div class="contenedorForm">
+                    <form class="mostrar_cliente" action="index.php?c=usuario&f=listarCliente" method="POST" > 
+                        <img src="/assets/img/busqueda.png" alt="mostrar">
+                        <input class="mostrar_clientes" class="boton" type="submit" value="Mostrar clientes">
+                    </form>
+                </div>
             </div>
-        </div>
         <?php 
-        }?>
+        }
+        else{?>
+
+                <div class="acciones_admin">
+                <div class="contenedorForm">
+                    <form class="registro_empleado" action="index.php?c=usuario&f=" method="POST" > 
+                        <img src="/assets/img/registro.png" alt="mostrar">
+                        <input class="registrar_empleados" class="boton" type="submit" value="Registrar productos">
+                    </form>
+                </div>
+
+                <div class="contenedorForm">
+                    <form class="mostrar_empleado" action="index.php?c=&f=" method="POST" > 
+                        <img src="/assets/img/busqueda.png" alt="mostrar">
+                        <input class="mostrar_empleados" class="boton" type="submit" value="Mostrar productos">
+                    </form>
+                </div>
+
+                <div class="contenedorForm">
+                    <form class="mostrar_cliente" action="index.php?c=usuario&f=listarCliente" method="POST" > 
+                        <img src="/assets/img/busqueda.png" alt="mostrar">
+                        <input class="mostrar_clientes" class="boton" type="submit" value="Mostrar clientes">
+                    </form>
+                </div>
+            </div>
+
+        <?php 
+        }
+        ?>
     </main>
 </body>
 </html>

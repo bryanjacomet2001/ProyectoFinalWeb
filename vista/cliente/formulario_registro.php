@@ -67,6 +67,7 @@
                 <select name="rol" id="rol">
                     <option value="cliente">cliente</option>
                     <option value="administrador">administrador</option>
+                    <option value="empleado">empleado</option>
                 </select>
                 </div> <br>
 

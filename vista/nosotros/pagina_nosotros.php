@@ -96,12 +96,7 @@
         </div>
 
     </div>
-    <div class="testimonios">
-        <div>
-            <p>Exelente atencion del hospital buen trato al paciente y buenos especialistas veterinarios atendieron y salvaron a mi perrita</p>
-            
-        </div>
-    </div>
+    
     <section class="agregar-testimonios">
         <h2>Agrega tus testimonios</h2>
         <div>
@@ -111,7 +106,24 @@
             </div>
         </div>
     </section>
-
+    
+    <div class="content-testimonios">
+        
+        <?php 
+            
+            foreach ($resultados as $fila){
+            ?>
+            <div class="testimonios">
+                <img src="./assets/img/quote_32.png" alt="quote">
+                <div>
+                    <p><?php echo $fila['comentario'] ?></p>
+                </div>
+                <h3><?php echo $fila['nombre'] ?></h3>
+                <h5><?php echo $fila['fecha_comentario'] ?></h5>
+            </div>
+        <?php }?>
+    </div>
+    
     <footer>
         <div class="footer-logo">
             <img src="./assets/img/logo.png" alt="Logo">
