@@ -108,14 +108,20 @@
     </section>
     
     <div class="content-testimonios">
-        <div class="testimonios">
-            <img src="./assets/img/quote_32.png" alt="quote">
-            <div>
-                <p>Exelente atencion del hospital buen trato al paciente y buenos especialistas veterinarios atendieron y salvaron a mi perrita</p>
+        
+        <?php 
+            
+            foreach ($resultados as $fila){
+            ?>
+            <div class="testimonios">
+                <img src="./assets/img/quote_32.png" alt="quote">
+                <div>
+                    <p><?php echo $fila['comentario'] ?></p>
+                </div>
+                <h3><?php echo $fila['nombre'] ?></h3>
+                <h5><?php echo $fila['fecha_comentario'] ?></h5>
             </div>
-            <h3>Edinson Flores</h3>
-            <h5>2022-02-23</h5>
-        </div>
+        <?php }?>
     </div>
     
     <footer>

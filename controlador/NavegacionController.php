@@ -1,5 +1,5 @@
 <?php 
-
+    require_once 'NosotrosController.php';
     if(!isset($_SESSION)){
         session_start();
     }
@@ -21,6 +21,8 @@
         }
 
         public function RedireccionarPaginaNosotros(){
+            $ObjControl = new NosotrosController();
+            $resultados = $ObjControl->listar();
             include './vista/nosotros/pagina_nosotros.php';
         }
 

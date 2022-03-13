@@ -34,6 +34,9 @@ class NosotrosController{
         }
         
     }
+    public function listar(){
+        return $resultados = $this->modelo->listar();
+    }
 
 }
 ?>
