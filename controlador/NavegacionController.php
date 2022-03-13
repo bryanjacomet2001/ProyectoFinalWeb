@@ -5,10 +5,6 @@
     }
         
     class NavegacionController{
-<<<<<<< HEAD
-=======
-        
->>>>>>> 9f507825dd99f8b8ad50f8f653555832b7dc52ba
         public function RedireccionarInicio(){
             require_once './vista/cliente/pagina_principal.php';
         }
