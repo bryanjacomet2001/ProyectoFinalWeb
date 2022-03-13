@@ -42,8 +42,20 @@
 
         public function listar(){
             
-            $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
-             r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol";
+            $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username, u.contraseña, u.correo, u.idRol, 
+            r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol";
+            $stmt = $this->con->prepare($sql);
+            $stmt->execute();
+
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $resultados;
+        }
+
+        public function listarCliente(){
+            
+            $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
+            r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol = 1" ;
             $stmt = $this->con->prepare($sql);
             $stmt->execute();
 
@@ -55,8 +67,8 @@
         public function buscar($busq){
 
             if(!empty($busq)){
-                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
-                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE cedula='$busq'";
+                $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.cedula='$busq' AND u.idRol = 1";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();
     
@@ -64,8 +76,8 @@
 
             }else{
 
-                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
-                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol";
+                $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
+                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol = 1";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();
 
@@ -78,8 +90,8 @@
 
             if(!empty($busq)){
 
-                $sql = "SELECT u.idRol, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
-                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol='$busq'";
+                $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
+                r.descripcion, u.idRol FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.id='$busq'";
                 $stmt = $this->con->prepare($sql);
                 $stmt->execute();
     

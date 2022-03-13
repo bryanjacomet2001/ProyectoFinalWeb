@@ -20,7 +20,7 @@
             <li></li>
             <li></li>
             <li></li>
-            <li><a href="index.php?c=usuario&f=listar">Regresar</a></li>
+            <li><a href="index.php?c=usuario&f=listarCliente">Regresar</a></li>
         </ul>
         </nav>
     </header>
@@ -72,7 +72,8 @@
                         if($fila['idrol'] == $rol['idRol']){
                             $selected='selected="selected"';
                         }
-                        echo  "<option ".$selected." value='".$fila['descripcion']."'>".$fila['descripcion']."</option>";
+                        echo  "<option ".$selected." value='".$rol['descripcion']."'>".$rol['descripcion']."</option>";
+                        break;
                     }
                     ?>
                 </select>

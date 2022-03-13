@@ -43,7 +43,7 @@
         </div>
 
         <div class="contenedorForm">
-            <form class="mostrar_cliente" action="index.php?c=usuario&f=listar" method="POST" > 
+            <form class="mostrar_cliente" action="index.php?c=usuario&f=listarCliente" method="POST" > 
                 <img src="/assets/img/busqueda.png" alt="mostrar">
                 <input class="mostrar_clientes" class="boton" type="submit" value="Mostrar clientes">
             </form>

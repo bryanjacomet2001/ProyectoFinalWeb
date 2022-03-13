@@ -28,9 +28,6 @@
                 $pass = $_REQUEST['contrasena'];
                 
                 $resultados = $this->modelo->listar();
-                
-                $modeloRoles = new RolesDAO();
-                $roles = $modeloRoles->listar();
 
                 foreach($resultados as $i){
                     if($i['username'] == $user && $i['contraseña'] == $pass){
@@ -102,6 +99,11 @@
             require_once './vista/cliente/mostrar_clientes.php';
         }
 
+        public function listarCliente(){
+            $resultados = $this->modelo->listarCliente();
+            require_once './vista/cliente/mostrar_clientes.php';
+        }
+
         public function buscar(){
             $busq = $_REQUEST['cedula'];
             $resultados = $this->modelo->buscar($busq);
@@ -136,13 +138,12 @@
                     $this->modelo->actualizar($cliente);
                 }
 
-                header('Location:index.php?c=usuario&f=listar');
+                header('Location:index.php?c=usuario&f=listarCliente');
 
             }
             else{
                 $id = $_REQUEST['id'];
                 $modeloRoles = new RolesDAO();
-                
                 $resultados = $this->modelo->buscarxid($id);
                 $roles = $modeloRoles->listar();
 
