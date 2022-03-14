@@ -50,5 +50,19 @@ class NosotrosController{
         header('Location:index.php?c=nosotros&f=listarMisTestimonios');
     }
 
+    public function getTestimonio(){
+        $id_comentario = (int)$_REQUEST['codigo'];
+        $resultados = $this->modelo->getTestimonio($id_comentario);
+        require_once './vista/nosotros/editar_testimonio.php';
+    }
+    public function actualizar(){
+        $codi=$_REQUEST['codi'];
+        $txtComentario = $_REQUEST['txtComentario'];
+        $txtCalificacion = $_REQUEST['txtCalificacion'];
+        $fecha= date('Y-m-d H:i:s');
+        $this->modelo->actualizar($codi,$txtComentario,$txtCalificacion,$fecha);
+        header('Location:index.php?c=nosotros&f=listarMisTestimonios');
+    }
+
 }
 ?>

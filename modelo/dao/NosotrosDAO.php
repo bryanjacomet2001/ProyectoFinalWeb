@@ -60,6 +60,21 @@ class NosotrosDAO{
         return $flag;
     }
 
+    public function getTestimonio($id_comentario){
+        $sql = "SELECT * FROM TESTIMONIO where CODIGO_TESTIMONIO= $id_comentario ";
+        $stmt = $this->con->prepare($sql);
+        $stmt->execute();
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $resultados; 
+    }
+
+    public function actualizar($codi,$txtComentario,$txtCalificacion,$fecha){
+        $sql = "UPDATE TESTIMONIO SET comentario = '$txtComentario', CALIFICACION = '$txtCalificacion',  
+        FECHA_COMENTARIO = '$fecha' WHERE CODIGO_TESTIMONIO = $codi";
+        $stmt = $this->con->prepare($sql);
+        $stmt->execute();
+    }
+
 
 }
 

@@ -80,7 +80,7 @@
                                 <a class="btn" href="index.php?c=nosotros&f=eliminar&codigo=<?php echo $fila['CODIGO_TESTIMONIO']?>">
                                     <img src="./assets/img/cancel_16.png" alt="eliminar">
                                 </a>                              
-                                <a class="btn" href="eliminar_comentario.php?codigo=<?php echo $fila['CODIGO_TESTIMONIO']?>">
+                                <a class="btn" href="index.php?c=nosotros&f=getTestimonio&codigo=<?php echo $fila['CODIGO_TESTIMONIO']?>">
                                     <img src="./assets/img/update_16.png" alt="editar">
                                 </a>
                             </td>
