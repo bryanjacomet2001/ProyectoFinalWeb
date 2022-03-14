@@ -39,6 +39,14 @@ class NosotrosDAO{
         return $resultados;
     }
 
+    public function listarId( $id){
+        $sql = "SELECT * FROM TESTIMONIO where ID_USUARIO= $id ";
+        $stmt = $this->con->prepare($sql);
+        $stmt->execute();
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $resultados; 
+    }
+
 
 }
 

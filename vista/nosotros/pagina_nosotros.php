@@ -2,6 +2,9 @@
  if(!isset($_SESSION)){
     session_start();
 }
+foreach ($resultados2 as $fila){
+    $_SESSION['Id_Usuario']= $fila['id'];
+}
 
 ?>
 
@@ -103,6 +106,9 @@
             <p>Envianos tu testimonio una vez al mes,!siempre lo leemos!</p>
             <div class="boton-testimonios">
                 <a href="index.php?c=nosotros&f=iniciarFormulario">Agregar</a>
+            </div>
+            <div class="boton-testimonios comentario">
+                <a href="index.php?c=nosotros&f=listarMisTestimonios"> Mis Testimonios</a>
             </div>
         </div>
     </section>

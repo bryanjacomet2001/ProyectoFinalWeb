@@ -37,6 +37,11 @@ class NosotrosController{
     public function listar(){
         return $resultados = $this->modelo->listar();
     }
+    
+    public function listarMisTestimonios(){
+        $id =$_SESSION['Id_Usuario'];
+        $resultados = $this->modelo->listarId($id);
+    }
 
 }
 ?>

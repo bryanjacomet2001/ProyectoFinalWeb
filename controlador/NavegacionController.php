@@ -20,7 +20,9 @@
         }
 
         public function RedireccionarPaginaNosotros(){
+            $Objmodelo = new NosotrosDAO();
             $ObjControl = new NosotrosController();
+            $resultados2 = $Objmodelo->getDatos();
             $resultados = $ObjControl->listar();
             include './vista/nosotros/pagina_nosotros.php';
         }

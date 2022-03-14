@@ -139,7 +139,7 @@
 }
 
 .agregar-testimonios{
-    display: block;
+   
     background-color: rgba(41,41,41,0.42);
     background-position: center center;
     color: white;
@@ -148,6 +148,10 @@
     font-size: 16px;
     font-weight: 400;
 }
+.comentario{
+   margin-left:30%;
+   
+}
 .agregar-testimonios p{
     display: inline-block;
    
@@ -155,7 +159,7 @@
 .boton-testimonios {
     display: inline-block;
     background-color: #47cfac;
-    width: 100px;
+    width: 140px;
     border-radius: 10px;
     padding-left: 1%;
 }
