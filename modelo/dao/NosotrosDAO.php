@@ -47,6 +47,19 @@ class NosotrosDAO{
         return $resultados; 
     }
 
+    public function eliminar($id_comentario){
+        $flag=false;
+        try{
+            $sql ="DELETE FROM testimonio WHERE CODIGO_TESTIMONIO =$id_comentario";
+            $stmt = $this->con->prepare($sql);
+            $stmt->execute();
+            $flag = true;
+        }catch(PDOException $e){
+            $flag=false;
+        }
+        return $flag;
+    }
+
 
 }
 

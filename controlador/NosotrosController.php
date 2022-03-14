@@ -41,6 +41,13 @@ class NosotrosController{
     public function listarMisTestimonios(){
         $id =$_SESSION['Id_Usuario'];
         $resultados = $this->modelo->listarId($id);
+        require_once './vista/nosotros/mostrar_mis_testimonios.php';
+    }
+
+    public function eliminar(){
+        $id_comentario = (int)$_REQUEST['codigo'];
+        $resultados = $this->modelo->eliminar($id_comentario);
+        header('Location:index.php?c=nosotros&f=listarMisTestimonios');
     }
 
 }
