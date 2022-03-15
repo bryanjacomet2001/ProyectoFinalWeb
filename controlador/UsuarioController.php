@@ -52,12 +52,11 @@
                         
                     }else{
                         $flag = false;
-                        $_SESSION['msjD'] = "Credenciales incorrectas";
-                        header('Location:index.php?c=usuario&f=index');
                     }
                 }
-
+                
                 if($flag == false){
+                    $_SESSION['msjD'] = "Credenciales incorrectas";
                     header('Location:index.php?c=usuario&f=index');
                 }
 
