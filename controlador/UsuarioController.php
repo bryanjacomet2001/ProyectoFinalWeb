@@ -98,7 +98,6 @@
                 }
                 
                 $_SESSION['msj'] = $msj;
-
                 header('Location:index.php?c=usuario&f=index');
 
             }else{
