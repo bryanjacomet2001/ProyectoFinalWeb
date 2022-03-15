@@ -54,12 +54,12 @@
                         $flag = false;
                     }
                 }
-                
+
                 if($flag == false){
                     $_SESSION['msjD'] = "Credenciales incorrectas";
                     header('Location:index.php?c=usuario&f=index');
                 }
-
+                
             }else{
                 require_once './vista/cliente/login.php';
             }
