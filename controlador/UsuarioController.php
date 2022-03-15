@@ -24,13 +24,15 @@
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
+                $flag = false;
                 $user = $_REQUEST['username'];
                 $pass = $_REQUEST['contrasena'];
                 
                 $resultados = $this->modelo->listar();
-
+      
                 foreach($resultados as $i){
                     if($i['username'] == $user && $i['contraseña'] == $pass){
+                        $flag = true;
                         $_SESSION['user'] = $i['username'];
                         if($i['idRol'] == 1){
                             $_SESSION['rol'] = "cliente";
@@ -47,11 +49,18 @@
                             $_SESSION['user'] = $i['username'];
                             header('Location:index.php?c=navegacion&f=RedireccionarAcciones');
                         }
+                        
                     }else{
+                        $flag = false;
                         $_SESSION['msjD'] = "Credenciales incorrectas";
                         header('Location:index.php?c=usuario&f=index');
                     }
                 }
+
+                if($flag == false){
+                    header('Location:index.php?c=usuario&f=index');
+                }
+
             }else{
                 require_once './vista/cliente/login.php';
             }
