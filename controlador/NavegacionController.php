@@ -27,6 +27,10 @@
             include './vista/nosotros/pagina_nosotros.php';
         }
 
+        public function RedireccionarGaleria(){
+            require_once './vista/galeria/paginaGaleria.php';
+        }
+
         public function RedireccionarPaginaContactenos(){
             require_once './vista/contactenos/pagina_contactenos.php';
         }
