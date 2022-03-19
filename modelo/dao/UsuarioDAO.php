@@ -64,6 +64,19 @@
             return $resultados;
         }
 
+        public function listarEmpleado(){
+            
+            $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
+            r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol = 3" ;
+            $stmt = $this->con->prepare($sql);
+            $stmt->execute();
+
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $resultados;
+        }
+
+        //Para mostrar en la tabla
         public function buscar($busq){
 
             if(!empty($busq)){
@@ -86,6 +99,29 @@
             return $resultados;
         }
 
+        public function buscarEmpleados($busq){
+
+            if(!empty($busq)){
+                $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña,u.correo, 
+                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.cedula='$busq' AND u.idRol = 3";
+                $stmt = $this->con->prepare($sql);
+                $stmt->execute();
+    
+                $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            }else{
+
+                $sql = "SELECT u.id, u.cedula, u.nombre, u.apellido, u.username,u.contraseña, u.correo, 
+                r.descripcion FROM USUARIO as u INNER JOIN ROL as r ON u.idRol = r.idRol WHERE u.idRol = 3";
+                $stmt = $this->con->prepare($sql);
+                $stmt->execute();
+
+                $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            }
+            return $resultados;
+        }
+
+        //Para el actualizar
         public function buscarxid($busq){
 
             if(!empty($busq)){

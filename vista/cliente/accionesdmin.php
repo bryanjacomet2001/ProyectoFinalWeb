@@ -32,7 +32,7 @@
             <div class="acciones_admin">
        
                 <div class="contenedorForm">
-                    <form class="mostrar_empleado" action="index.php?c=&f=" method="POST" > 
+                    <form class="mostrar_empleado" action="index.php?c=usuario&f=listarEmpleado" method="POST" > 
                         <img src="/assets/img/busqueda.png" alt="mostrar">
                         <input class="mostrar_empleados" class="boton" type="submit" value="Mostrar Empleados">
                     </form>
@@ -50,7 +50,7 @@
         else{?>
                 <div class="acciones_admin">
                 <div class="contenedorForm">
-                    <form class="registro_empleado" action="index.php?c=contactenos&f=listar" method="POST" > 
+                    <form class="mostrar_mascotas" action="index.php?c=contactenos&f=listar" method="POST" > 
                         <img src="/assets/img/busqueda.png" alt="mostrar">
                         <input class="registrar_empleados" class="boton" type="submit" value="Mostrar mascotas">
                     </form>

@@ -20,7 +20,7 @@
             <li></li>
             <li></li>
             <li></li>
-            <li><a href="index.php?c=usuario&f=listarCliente">Regresar</a></li>
+            <li><a href="index.php?c=usuario&f=listarEmpleado">Regresar</a></li>
         </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
     <main>
 
         <div class="contenedorForm">
-            <form class="formulario_registro" method="POST" action="index.php?c=usuario&f=actualizar"> 
+            <form class="formulario_registro" method="POST" action="index.php?c=usuario&f=actualizarEmpleado"> 
                 
                 <?php foreach($resultados as $fila){ ?>
                 <h1>Formulario Editar usuario</h1> <br>
@@ -67,7 +67,7 @@
                 <div class="label"><label for="rol">Rol: </label></div>
                 <select name="rol" id="rol" >
                     <?php
-                      foreach($roles as $rol){
+                    foreach($roles as $rol){
                         $selected ="";
                         if($fila['idrol'] == $rol['idRol']){
                             $selected='selected="selected"';

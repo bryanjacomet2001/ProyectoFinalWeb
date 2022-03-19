@@ -115,11 +115,63 @@
             require_once './vista/cliente/mostrar_clientes.php';
         }
 
+        public function listarEmpleado(){
+            $resultados = $this->modelo->listarEmpleado();
+            require_once './vista/cliente/mostrar_empleados.php';
+        }
+
         public function buscar(){
             $busq = $_REQUEST['cedula'];
             $resultados = $this->modelo->buscar($busq);
             require_once './vista/cliente/mostrar_clientes.php';
 
+        }
+
+        public function buscarEmpleados(){
+            $busq = $_REQUEST['cedula'];
+            $resultados = $this->modelo->buscarEmpleados($busq);
+            require_once './vista/cliente/mostrar_empleados.php';
+
+        }
+
+        public function actualizarEmpleado(){
+            
+            require_once './modelo/dao/RolesDAO.php';
+
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                $cedula = $_REQUEST['cedula'];
+                $nombre = $_REQUEST['nombre'];
+                $apellido = $_REQUEST['apellido'];
+                $username = $_REQUEST['username'];
+                $contrasena = $_REQUEST['contraseña'];
+                $correo = $_REQUEST['correo'];
+
+                if(!empty($cedula) && !empty($nombre) && !empty($apellido) && !empty($username) && !empty($contrasena) && !empty($correo)){
+                    
+                    $cliente = new Usuario();
+
+                    $cliente->setCedula($cedula);
+                    $cliente->setNombre($nombre);
+                    $cliente->setApellido($apellido);
+                    $cliente->setUsername($username);
+                    $cliente->setContra($contrasena);
+                    $cliente->setEmail($correo);
+
+                    $this->modelo->actualizar($cliente);
+                }
+
+                header('Location:index.php?c=usuario&f=listarEmpleado');
+
+            }
+            else{
+                $id = $_REQUEST['id'];
+                $modeloRoles = new RolesDAO();
+                $resultados = $this->modelo->buscarxid($id);
+                $roles = $modeloRoles->listar();
+
+                require_once './vista/cliente/formulario_actualizar_empleado.php';
+            }
         }
 
         public function actualizar(){
@@ -165,7 +217,7 @@
         public function eliminar(){
             $busq = $_REQUEST['cedula'];
             $this->modelo->eliminar($busq);
-            header('Location:index.php?c=usuario&f=index');
+            header('Location:index.php?c=usuario&f=listarEmpleado');
         }
     }
 
