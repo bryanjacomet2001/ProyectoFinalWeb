@@ -121,7 +121,7 @@
             </nav>
         </header>
 
-         <h1>Lista de usuarios</h1>
+         <h1>Lista de clientes</h1>
 
          <form class="seccionbuscar" method="POST" action="index.php?c=usuario&f=buscar">
             <label for="cedula" style="font-size: 20px;">Cedula:</label> <input type="text" name="cedula" id="cedula"> <br> <br>

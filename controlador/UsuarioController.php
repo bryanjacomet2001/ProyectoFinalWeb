@@ -217,6 +217,12 @@
         public function eliminar(){
             $busq = $_REQUEST['cedula'];
             $this->modelo->eliminar($busq);
+            header('Location:index.php?c=usuario&f=listarCliente');
+        }
+
+        public function eliminarEmpleado(){
+            $busq = $_REQUEST['cedula'];
+            $this->modelo->eliminar($busq);
             header('Location:index.php?c=usuario&f=listarEmpleado');
         }
     }

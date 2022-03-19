@@ -121,7 +121,7 @@
             </nav>
         </header>
 
-         <h1>Lista de usuarios</h1>
+         <h1>Lista de empleados</h1>
 
          <form class="seccionbuscar" method="POST" action="index.php?c=usuario&f=buscarEmpleados">
             <label for="cedula" style="font-size: 20px;">Cedula:</label> <input type="text" name="cedula" id="cedula"> <br> <br>
@@ -156,7 +156,7 @@
                             <td><?php echo $fila['descripcion']?></td>
                             <td>
                                 <a class="editar" href="index.php?c=usuario&f=actualizarEmpleado&id=<?php echo $fila['id'];?>">Editar</a>
-                                <a class="eliminar" href="index.php?c=usuario&f=eliminar&cedula=<?php echo $fila['cedula'];?>">Eliminar</a>
+                                <a class="eliminar" href="index.php?c=usuario&f=eliminarEmpleado&cedula=<?php echo $fila['cedula'];?>">Eliminar</a>
                             </td>
                         </tr>
                     <?php } ?>
