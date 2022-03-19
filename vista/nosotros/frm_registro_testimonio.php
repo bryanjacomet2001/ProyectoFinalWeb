@@ -25,16 +25,20 @@
     ?>
     <header>
         <div class="header-logo">
-            <img src="../img/Logo.png" alt="Logo">
+            <img src="./assets/img/logo.png" alt="Logo">
         </div>
         
         <nav class="header-navbar">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="../html/LinoJaime.html">Nosotros</a></li>
+        <ul>
+                <li><a href="index.php?c=navegacion&f=RedireccionarInicio">Inicio</a></li>
+                <li><a href="index.php?c=navegacion&f=RedireccionarPaginaNosotros">Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Contactenos</a></li>
+                <div class="perfil_usuario">
+                    <li><a href="#"><a href="#"><?php echo $_SESSION['user']?></a></li>
+                    <li><a href="index.php?c=navegacion&f=salir">Cerrar sesión</a></li>
+                </div>
             </ul>
         </nav>
     </header>
@@ -59,9 +63,6 @@
                     <label for="email">Correo Electronico</label>
                     <input disabled type="text" name="email" id="email" value="<?php echo $email?>">
                 </div>
-        
-               
-
             </fieldset>
 
             <fieldset>
@@ -105,7 +106,7 @@
 
     <footer>
         <div class="footer-logo">
-            <img src="../img/Logo.png" alt="Logo">
+            <img src="./assets/img/logo.png" alt="Logo">
         </div>
 
         <div class="about-us">
@@ -126,6 +127,6 @@
         </div>
     </footer>
     <!--PARA ENLAZAR EL DOCUMENTO JS EXTERNO-->
-    <script type="text/javascript" src="../js/validacionLJ.js"> </script>
+    <script type="text/javascript" src="/assets/js/registroNosotros"> </script>
 </body>
 </html>

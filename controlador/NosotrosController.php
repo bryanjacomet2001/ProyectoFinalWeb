@@ -25,11 +25,10 @@ class NosotrosController{
         $fecha= date('Y-m-d H:i:s');
         $id = $_REQUEST['id'];
         if(!empty($comentario) && !empty($calificacion) && !empty($fecha) && !empty($id)){
-           $resultados = $this->modelo->insertar($comentario,$calificacion,$fecha, $id);  
+           $resultados = $this->modelo->insertar($comentario,$calificacion,$fecha, $id);
+           NosotrosController::listarMisTestimonios();
         }
-        if(!$resultados){
-            $_SESSION['msj'] = "Ha ocurrido un error";
-        }else{
+        else{
             header('Location:index.php?c=navegacion&f=RedireccionarPaginaNosotros');
         }
         
