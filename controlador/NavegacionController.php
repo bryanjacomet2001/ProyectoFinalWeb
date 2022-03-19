@@ -42,6 +42,9 @@
         public function MostrarMascota(){
             require_once './vista/contactenos/mostrar_mascota.php';
         }
+        public function FormularioProducto(){
+            require_once './vista/productos/registro_producto.php';
+        }
 
     }
 ?>

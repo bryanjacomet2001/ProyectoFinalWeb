@@ -4,7 +4,7 @@ class Conexion{
     public static function getConexion(){
         $host = 'localhost';
         $user = 'root';
-        $clave = '12345';
+        $clave = 'VYLF9SdXJ7KEBCL';
         $bd = 'proyectoweb';
         $dsn = 'mysql:host=localhost;dbname='.$bd; 
         $conexion = null; 
