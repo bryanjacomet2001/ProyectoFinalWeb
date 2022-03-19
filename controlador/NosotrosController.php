@@ -26,7 +26,7 @@ class NosotrosController{
         $id = $_REQUEST['id'];
         if(!empty($comentario) && !empty($calificacion) && !empty($fecha) && !empty($id)){
            $resultados = $this->modelo->insertar($comentario,$calificacion,$fecha, $id);
-           NosotrosController::listarMisTestimonios();
+           header('Location:index.php?c=navegacion&f=RedireccionarPaginaNosotros');
         }
         else{
             header('Location:index.php?c=navegacion&f=RedireccionarPaginaNosotros');
