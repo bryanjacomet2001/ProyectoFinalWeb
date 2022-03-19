@@ -26,12 +26,11 @@
                 <li><a href="index.php?c=navegacion&f=RedireccionarPaginaNosotros">Nosotros</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contactenos</a></li>
+                <li><a href="index.php?c=navegacion&f=RedireccionarPaginaContactenos">Contactenos</a></li>
                 <div class="perfil_usuario">
                     <li><a href="#"><a href="#"><?php echo $_SESSION['user']?></a></li>
                     <li><a href="index.php?c=navegacion&f=salir">Cerrar sesión</a></li>
                 </div>
-                
             </ul>
         </nav>
     </header>
@@ -54,7 +53,7 @@
                 </p>
 
                 <div class="registro">
-                    <p><a href="#"> Registrese</a></p>
+                    <p><a href="index.php?c=navegacion&f=FormularioMascota"> Registre a su mascota</a></p>
                 </div>
 
 

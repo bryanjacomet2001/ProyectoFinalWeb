@@ -1,0 +1,136 @@
+.regresar{
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: turquoise;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px;
+    font-size: 2rem;
+}
+
+
+.Formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    flex-direction: column;
+    
+}
+
+.Registro{
+    display: flex;
+    flex-direction: column;
+    border: turquoise solid 1px;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+}
+
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.Registro h1{
+    text-align: center;
+    color:#47cfac;
+    padding: 10px;
+
+}
+
+.Registro .label{
+    font-size: 14px;
+}
+
+.Registro .input, .Registro.select{
+    padding: 15px;
+}
+
+.Registro .campos{
+    font-size: 14px;
+}
+
+.perfil_usuario{
+    display: flex;
+    border: solid 1px black;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 28%;
+}
+
+.perfil_usuario a{
+    text-decoration: none;
+}
+.button{
+    width: 15%;
+    margin-top: 10px;
+    border: rgb(82, 204, 137) solid 2px;
+    border-radius: 10px;
+    background-color: #47cfac;
+    font-size: 14px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #47cfac;
+    --secondary-color: #006790;
+    --terciary-color: #098a81;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+header{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.8rem;
+    
+    background-color: var(--primary-color);
+    
+}
+.header-logo img{
+    width: 140px;
+    margin-left: 30px;
+}
+.header-navbar{
+    min-width: 500px;
+    width: 800px;
+}
+.header-navbar ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+a:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}

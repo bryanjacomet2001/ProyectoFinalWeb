@@ -27,5 +27,17 @@
             include './vista/nosotros/pagina_nosotros.php';
         }
 
+        public function RedireccionarPaginaContactenos(){
+            require_once './vista/contactenos/pagina_contactenos.php';
+        }
+
+        public function FormularioMascota(){
+            require_once './vista/contactenos/FrmRegistrar_mascota.php';
+        }
+
+        public function MostrarMascota(){
+            require_once './vista/contactenos/mostrar_mascota.php';
+        }
+
     }
 ?>
