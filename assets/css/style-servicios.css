@@ -75,6 +75,22 @@ header{
     color: white;
     font-weight: normal;
 }
+
+.perfil_usuario{
+    display: flex;
+    border: solid 1px black;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 28%;
+}
+
+.perfil_usuario a{
+    text-decoration: none;
+}
+
 main{
     width: 100%;
     display: grid;

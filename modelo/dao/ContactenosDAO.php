@@ -29,10 +29,18 @@ class ContactenosDAO{
     }
 
     public function listarId($id_ms){
-        $sql = "SELECT * FROM mascota where id_ms= $id_ms ";
-        $stmt = $this->con->prepare($sql);
-        $stmt->execute();
-        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if(!empty($id_ms)){
+            $sql = "SELECT * FROM mascota where id_ms= $id_ms ";
+            $stmt = $this->con->prepare($sql);
+            $stmt->execute();
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }else{
+            $sql = "SELECT * FROM mascota";
+            $stmt = $this->con->prepare($sql);
+            $stmt->execute();
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         return $resultados; 
     }
 
