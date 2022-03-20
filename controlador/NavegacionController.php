@@ -45,6 +45,9 @@
         public function FormularioProducto(){
             require_once './vista/productos/registro_producto.php';
         }
+        public function RedireccionarServicios(){
+            require_once './vista/productos/Servicios.php';
+        }
 
     }
 ?>

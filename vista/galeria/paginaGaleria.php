@@ -25,7 +25,7 @@
             <ul>
                 <li><a href="index.php?c=navegacion&f=RedireccionarInicio">Inicio</a></li>
                 <li><a href="index.php?c=navegacion&f=RedireccionarPaginaNosotros">Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="index.php?c=navegacion&f=RedireccionarServicios">Servicios</a></li>
                 <li><a href="index.php?c=navegacion&f=RedireccionarGaleria">Galeria</a></li>
                 <li><a href="index.php?c=navegacion&f=RedireccionarPaginaContactenos">Contactenos</a></li>
                 <div class="perfil_usuario">
